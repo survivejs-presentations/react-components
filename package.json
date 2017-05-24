@@ -1,8 +1,8 @@
 {
-  "name": "template",
+  "name": "react-components-presentation",
   "private": true,
   "version": "0.0.0",
-  "description": "Template",
+  "description": "Quick introduction to React components",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist",
