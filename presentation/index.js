@@ -72,7 +72,7 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>Model your application as a component hierarchy</ListItem></Appear>
             <Appear><ListItem>Each component can have <code>props</code> and <code>state</code></ListItem></Appear>
             <Appear><ListItem>Escape hatches through <code>lifecycle methods</code> and <code>refs</code></ListItem></Appear>
-            <Appear><ListItem>React forces you to think about <code>state</code> (good thing)</ListItem></Appear>
+            <Appear><ListItem>React forces you to think about <code>state</code> (a good thing!)</ListItem></Appear>
           </List>
         </Slide>
 
