@@ -304,66 +304,6 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-
-        <Slide transition={slideTransition} bgColor="secondary">
-          <Heading size={2} textColor="tertiary">
-            Stateless Functions
-          </Heading>
-        </Slide>
-
-        <Slide transition={slideTransition}>
-          <Heading size={4}>
-            Stateless Functions
-          </Heading>
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../examples/component_01.jsx")}
-            margin="20px auto"
-          />
-        </Slide>
-
-        <Slide transition={slideTransition}>
-          <Heading size={4}>
-            Stateless Functions with a Shorthand
-          </Heading>
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../examples/component_02.jsx")}
-            margin="20px auto"
-          />
-        </Slide>
-
-        <Slide transition={slideTransition}>
-          <Heading size={4}>
-            Stateless Functions Destructured
-          </Heading>
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../examples/component_03.jsx")}
-            margin="20px auto"
-          />
-        </Slide>
-
-        <Slide transition={slideTransition}>
-        <Heading size={4}>
-          Stateless Functions Destructured and Formatted for Readability (parens!)
-        </Heading>
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../examples/component_04.jsx")}
-            margin="20px auto"
-          />
-        </Slide>
-
-        <Slide transition={slideTransition}>
-          <Heading size={1}>
-            Exercises
-          </Heading>
-          <List>
-            <Appear><ListItem>Refactor the application into function style where possible</ListItem></Appear>
-          </List>
-        </Slide>
-
         <Slide transition={slideTransition} bgColor="secondary">
           <Heading size={2} textColor="tertiary">
             Higher-Order Components
