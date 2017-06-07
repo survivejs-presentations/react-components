@@ -216,7 +216,48 @@ export default class Presentation extends React.Component {
 
         <Slide transition={slideTransition} bgColor="secondary">
           <Heading size={2} textColor="tertiary">
-            <code>refs</code> and Lifecycle Methods
+            Composition
+          </Heading>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={1} fit>
+            <Link href="https://codesandbox.io/s/qvEWNmJ0">Why to compose?</Link>
+          </Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!content!../examples/composition_01.jsx")}
+            margin="20px auto"
+          />
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={1} fit>
+            <Link href="https://codesandbox.io/s/X6GyyXg9v">Decomposition</Link>
+          </Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!content!../examples/composition_02.jsx")}
+            margin="20px auto"
+          />
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={1}>
+            Exercises
+          </Heading>
+          <List>
+            <Appear><ListItem>0. Decompose the counter as in the slides</ListItem></Appear>
+            <Appear><ListItem>1. Implement <b>App</b> that contains multiple <b>CatCounter</b>s</ListItem></Appear>
+            <Appear><ListItem>2. Implement a generic <b>Counter</b> so you can count other things*</ListItem></Appear>
+            <Appear><ListItem>3. Count total of all things in the user interface**</ListItem></Appear>
+            <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/X6GyyXg9v">0</Link>, <Link href="https://codesandbox.io/s/73AKPwX3j">1</Link>, <Link href="https://codesandbox.io/s/O7L2zM0mg">2</Link>, <Link href="https://codesandbox.io/s/X64K29kMo">3</Link></ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={slideTransition} bgColor="secondary">
+          <Heading size={2} textColor="tertiary">
+            <code>refs</code>
           </Heading>
         </Slide>
 
@@ -233,6 +274,21 @@ export default class Presentation extends React.Component {
 
         <Slide transition={slideTransition}>
           <Heading size={1}>
+            Exercises
+          </Heading>
+          <List>
+            <Appear><ListItem>Solutions: </ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={slideTransition} bgColor="secondary">
+          <Heading size={2} textColor="tertiary">
+            Lifecycle Methods
+          </Heading>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={1}>
             Lifecycle Methods
           </Heading>
           <Image src={images.lifecycle} margin="40px auto" height="324px" />
@@ -243,11 +299,11 @@ export default class Presentation extends React.Component {
             Exercises
           </Heading>
           <List>
-            <Appear><ListItem>Implement a <code>lifecycle method</code> and see when it gets triggered</ListItem></Appear>
-            <Appear><ListItem>*Implement <b>App</b> that contains multiple <b>CatCounter</b>s</ListItem></Appear>
-            <Appear><ListItem>**Push counter state management to <b>App</b></ListItem></Appear>
+            <Appear><ListItem>0. Implement a <code>lifecycle method</code> and see when it gets triggered</ListItem></Appear>
+            <Appear><ListItem>Solutions: </ListItem></Appear>
           </List>
         </Slide>
+
 
         <Slide transition={slideTransition} bgColor="secondary">
           <Heading size={2} textColor="tertiary">
