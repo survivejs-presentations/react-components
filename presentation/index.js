@@ -267,7 +267,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <CodePane
             lang="jsx"
-            source={require("raw-loader!../examples/component_09.jsx")}
+            source={require("raw-loader!../examples/refs_01.jsx")}
             margin="20px auto"
           />
         </Slide>
@@ -277,7 +277,9 @@ export default class Presentation extends React.Component {
             Exercises
           </Heading>
           <List>
-            <Appear><ListItem>Solutions: </ListItem></Appear>
+            <Appear><ListItem>0. Capture a custom amount using an input and a <b>ref</b></ListItem></Appear>
+            <Appear><ListItem>1. Do the same without a <b>ref</b>*</ListItem></Appear>
+            <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/VO7zJD0k5">0</Link> (can you see the bug?), <Link href="https://codesandbox.io/s/RoznJpjpE">1</Link></ListItem></Appear>
           </List>
         </Slide>
 
@@ -299,8 +301,8 @@ export default class Presentation extends React.Component {
             Exercises
           </Heading>
           <List>
-            <Appear><ListItem>0. Implement a <code>lifecycle method</code> and see when it gets triggered</ListItem></Appear>
-            <Appear><ListItem>Solutions: </ListItem></Appear>
+            <Appear><ListItem>0. Implement a <code>shouldComponentUpdate</code> at <b>Counter</b> so that it returns <code>false</code> and see when it gets triggered</ListItem></Appear>
+            <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/lO8pPZ2Zl">0</Link></ListItem></Appear>
           </List>
         </Slide>
 
@@ -326,8 +328,8 @@ export default class Presentation extends React.Component {
             Exercises
           </Heading>
           <List>
-            <Appear><ListItem>Refactor state management into a <code>stateful</code> HOC that contains <code>setState</code></ListItem></Appear>
-            <Appear><ListItem>Implement <code>Provider</code> and <code>connect</code> pair to pass state through hierarchy (hint: see Redux for basic API)*</ListItem></Appear>
+            <Appear><ListItem>0. Refactor state management into a <code>stateful</code> HOC that contains <code>setState</code></ListItem></Appear>
+            <Appear><ListItem>1. Implement <code>Provider</code> and <code>connect</code> pair to pass state through hierarchy (hint: see Redux for basic API)*</ListItem></Appear>
           </List>
         </Slide>
 
