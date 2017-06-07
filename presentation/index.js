@@ -147,7 +147,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={slideTransition}>
           <Heading size={1} fit>
-            <code>React.Component</code>
+            <Link href="https://codesandbox.io/s/76gK41lrQ"><code>React.Component</code></Link>
           </Heading>
           <CodePane
             lang="jsx"
@@ -158,7 +158,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={slideTransition}>
           <Heading size={1}>
-            No JSX
+            <Link href="https://codesandbox.io/s/NxXNAOZAK">No JSX</Link>
           </Heading>
           <CodePane
             lang="js"
@@ -169,7 +169,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={slideTransition}>
           <Heading size={1} fit>
-            <code>React.Component</code> with <Link href="https://github.com/tc39/proposal-class-public-fields">public fields (stage 2)</Link>
+            <Link href="https://codesandbox.io/s/JZxJgDqNg"><code>React.Component</code></Link> with <Link href="https://github.com/tc39/proposal-class-public-fields">public fields (stage 2)</Link>
           </Heading>
           <CodePane
             lang="jsx"
@@ -180,7 +180,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={slideTransition}>
           <Heading size={1} fit>
-            <code>React.Component</code> with Function Style <code>setState</code>
+            <Link href="https://codesandbox.io/s/3lBqVwL5A"><code>React.Component</code></Link> with Function Style <code>setState</code>
           </Heading>
           <CodePane
             lang="jsx"
@@ -191,7 +191,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={slideTransition}>
           <Heading size={1} fit>
-            <code>React.Component</code> with Function Style <code>setState</code> Extracted
+            <Link href="https://codesandbox.io/s/g5kzWv3Zl"><code>React.Component</code></Link> with Function Style <code>setState</code> Extracted
           </Heading>
           <CodePane
             lang="jsx"
@@ -205,11 +205,12 @@ export default class Presentation extends React.Component {
             Exercises
           </Heading>
           <List>
-            <Appear><ListItem>Copy the last cat counter example to <Link href="https://codesandbox.io/">CodeSandbox</Link></ListItem></Appear>
-            <Appear><ListItem>Make it possible to add two cats at once</ListItem></Appear>
-            <Appear><ListItem>*Add a reset button to restore the count to zero</ListItem></Appear>
-            <Appear><ListItem>**Add multiple options. Hint: <code>[1, 2, 4].map(...)</code>. Look up React <Link href="https://facebook.github.io/react/docs/reconciliation.html"><code>key</code></Link>. Why is it needed?</ListItem></Appear>
-            <Appear><ListItem>***Try <code>this.setState(..., cb)</code></ListItem></Appear>
+            <Appear><ListItem>0. Fork the last code example at <Link href="https://codesandbox.io/">CodeSandbox</Link>. You can find a link to it in the header.</ListItem></Appear>
+            <Appear><ListItem>1. Make it possible to add two cats at once</ListItem></Appear>
+            <Appear><ListItem>2. Add a reset button to restore the count to zero*</ListItem></Appear>
+            <Appear><ListItem>3. Add multiple options. Hint: <code>[1, 2, 4].map(...)</code>. Look up React <Link href="https://facebook.github.io/react/docs/reconciliation.html"><code>key</code></Link>. Why is it needed?**</ListItem></Appear>
+            <Appear><ListItem>4. Try <code>this.setState(..., cb)***</code></ListItem></Appear>
+            <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/L98PX9kMp">1</Link>, <Link href="https://codesandbox.io/s/Q1qvPRW55">2</Link>, <Link href="https://codesandbox.io/s/31J17rM7n">3</Link>, <Link href="https://codesandbox.io/s/qvEWNmJ0">4</Link></ListItem></Appear>
           </List>
         </Slide>
 
