@@ -353,8 +353,9 @@ export default class Presentation extends React.Component {
             Exercises
           </Heading>
           <List>
-            <Appear><ListItem>0. Refactor state management into a <code>stateful</code> HOC that contains <code>setState</code></ListItem></Appear>
-            <Appear><ListItem>1. Implement <code>Provider</code> and <code>connect</code> pair to pass state through hierarchy (hint: see Redux for basic API)*</ListItem></Appear>
+            <Appear><ListItem>0. Extract reset concern into <code>withReset</code> HOC that contains <b>Counter</b> reset related logic</ListItem></Appear>
+            <Appear><ListItem>1. Extract custom value concern into <code>withCustomValue</code> HOC that contains <b>Counter</b> custom input related logic*</ListItem></Appear>
+            <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/R6OWvlK30">0</Link>, <Link href="https://codesandbox.io/s/73v4G8MPr">1</Link></ListItem></Appear>
           </List>
         </Slide>
 
