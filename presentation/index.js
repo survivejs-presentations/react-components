@@ -65,7 +65,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
+          <Heading size={2}>
             React Philosophy
           </Heading>
           <List>
@@ -77,7 +77,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
+          <Heading size={2}>
             Components
           </Heading>
           <Layout>
@@ -151,14 +151,14 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
+          <Heading size={2}>
             Cat Counter
           </Heading>
           <Counter />
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1} fit>
+          <Heading size={2}>
             <Link href="https://codesandbox.io/s/76gK41lrQ"><code>React.Component</code></Link>
           </Heading>
           <CodePane
@@ -169,7 +169,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
+          <Heading size={2}>
             <Link href="https://codesandbox.io/s/NxXNAOZAK">No JSX</Link>
           </Heading>
           <CodePane
@@ -180,7 +180,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1} fit>
+          <Heading size={2} fit>
             <Link href="https://codesandbox.io/s/JZxJgDqNg"><code>React.Component</code></Link> with <Link href="https://github.com/tc39/proposal-class-public-fields">public fields (stage 2)</Link>
           </Heading>
           <CodePane
@@ -191,7 +191,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1} fit>
+          <Heading size={2} fit>
             <Link href="https://codesandbox.io/s/3lBqVwL5A"><code>React.Component</code></Link> with Function Style <code>setState</code>
           </Heading>
           <CodePane
@@ -202,7 +202,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1} fit>
+          <Heading size={2} fit>
             <Link href="https://codesandbox.io/s/g5kzWv3Zl"><code>React.Component</code></Link> with Function Style <code>setState</code> Extracted
           </Heading>
           <CodePane
@@ -213,7 +213,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
+          <Heading size={2}>
             Exercises
           </Heading>
           <List>
@@ -227,7 +227,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
+          <Heading size={2}>
             <code>key</code>
           </Heading>
           <CodePane
@@ -245,7 +245,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1} fit>
+          <Heading size={2}>
             <Link href="https://codesandbox.io/s/qvEWNmJ0">Why composition?</Link>
           </Heading>
           <CodePane
@@ -256,7 +256,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1} fit>
+          <Heading size={2}>
             <Link href="https://codesandbox.io/s/X6GyyXg9v">Decomposition</Link>
           </Heading>
           <CodePane
@@ -267,7 +267,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
+          <Heading size={2}>
             Exercises
           </Heading>
           <List>
@@ -286,7 +286,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={4}>
+          <Heading size={2} fit>
             <code>React.Component</code> with a Ref
           </Heading>
           <CodePane
@@ -297,7 +297,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
+          <Heading size={2}>
             Exercises
           </Heading>
           <List>
@@ -314,14 +314,14 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
+          <Heading size={2}>
             Lifecycle Methods
           </Heading>
           <Image src={images.lifecycle} margin="40px auto" height="324px" />
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
+          <Heading size={2}>
             Exercises
           </Heading>
           <List>
@@ -337,7 +337,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1} fit>
+          <Heading size={2} fit>
             Why Higher-Order Components?
           </Heading>
           <List>
@@ -348,7 +348,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
+          <Heading size={2}>
             Exercises
           </Heading>
           <List>
