@@ -287,11 +287,22 @@ export default class Presentation extends React.Component {
 
         <Slide transition={slideTransition}>
           <Heading size={2} fit>
-            <code>React.Component</code> with a Ref
+            <code>React.Component</code> with a ref
           </Heading>
           <CodePane
             lang="jsx"
             source={require("raw-loader!../examples/refs_01.jsx")}
+            margin="20px auto"
+          />
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={2} fit>
+            Function based component with a ref
+          </Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../examples/refs_02.jsx")}
             margin="20px auto"
           />
         </Slide>
@@ -321,6 +332,17 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
+          <Heading size={2} fit>
+            <code>shouldComponentUpdate(nextProps, nextState)</code>
+          </Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../examples/lifecycle_01.jsx")}
+            margin="20px auto"
+          />
+        </Slide>
+
+        <Slide transition={slideTransition}>
           <Heading size={2}>
             Exercises
           </Heading>
@@ -345,7 +367,19 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>Encapsulate a specific concern</ListItem></Appear>
             <Appear><ListItem>Examples: <code>authenticated</code> route, <code>connect</code> (pass state)</ListItem></Appear>
             <Appear><ListItem>Smaller slices to test</ListItem></Appear>
+            <Appear><ListItem><Link href="https://facebook.github.io/react/docs/higher-order-components.html">Read React Higher-Order Components to learn more</Link></ListItem></Appear>
           </List>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={2} fit>
+            Higher-Order Component Example
+          </Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../examples/hoc_01.jsx")}
+            margin="20px auto"
+          />
         </Slide>
 
         <Slide transition={slideTransition}>
