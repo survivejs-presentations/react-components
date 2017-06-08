@@ -32,10 +32,7 @@ class CatCounter extends React.Component {
     );
   }
   sawCat = (amountToAdd) => {
-    this.setState(
-      addAmount(amountToAdd),
-      () => console.log(`added ${amountToAdd}`)
-    );
+    this.setState(addAmount(amountToAdd));
   }
   reset = () => {
     this.setState(reset);

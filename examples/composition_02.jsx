@@ -11,8 +11,9 @@ class CatCounter extends React.Component {
     return (
       <div>
         <h2>I've seen {this.state.amount} cats</h2>
-        {[1, 2, 4].map((amountToAdd) => (
+        {[1, 2, 4].map((amountToAdd, i) => (
           <CatAdder
+            key={`cat-button-${i}`}
             amountToAdd={amountToAdd}
             onAdd={() => this.sawCat(amountToAdd)}
           />

@@ -91,42 +91,54 @@ export default class Presentation extends React.Component {
                 </TableRow>
               </thead>
               <tbody>
-                <TableRow>
-                  <TableItem><code>props</code></TableItem>
-                  <TableItem>X</TableItem>
-                  <TableItem>X</TableItem>
-                  <TableItem>X</TableItem>
-                </TableRow>
-                <TableRow>
-                  <TableItem><code>context</code></TableItem>
-                  <TableItem>X</TableItem>
-                  <TableItem>X</TableItem>
-                  <TableItem>X</TableItem>
-                </TableRow>
-                <TableRow>
-                  <TableItem><code>refs</code></TableItem>
-                  <TableItem>X</TableItem>
-                  <TableItem>X</TableItem>
-                  <TableItem>(X)</TableItem>
-                </TableRow>
-                <TableRow>
-                  <TableItem><code>state</code></TableItem>
-                  <TableItem>X</TableItem>
-                  <TableItem>X</TableItem>
-                  <TableItem />
-                </TableRow>
-                <TableRow>
-                  <TableItem>Lifecycle methods</TableItem>
-                  <TableItem>X</TableItem>
-                  <TableItem>X</TableItem>
-                  <TableItem />
-                </TableRow>
-                <TableRow>
-                  <TableItem>Notes</TableItem>
-                  <TableItem>Deprecated!</TableItem>
-                  <TableItem />
-                  <TableItem>Good default</TableItem>
-                </TableRow>
+                <Appear>
+                  <TableRow>
+                    <TableItem><code>props</code></TableItem>
+                    <TableItem>X</TableItem>
+                    <TableItem>X</TableItem>
+                    <TableItem>X</TableItem>
+                  </TableRow>
+                </Appear>
+                <Appear>
+                  <TableRow>
+                    <TableItem><code>context</code></TableItem>
+                    <TableItem>X</TableItem>
+                    <TableItem>X</TableItem>
+                    <TableItem>X</TableItem>
+                  </TableRow>
+                </Appear>
+                <Appear>
+                  <TableRow>
+                    <TableItem><code>refs</code></TableItem>
+                    <TableItem>X</TableItem>
+                    <TableItem>X</TableItem>
+                    <TableItem>X</TableItem>
+                  </TableRow>
+                </Appear>
+                <Appear>
+                  <TableRow>
+                    <TableItem><code>state</code></TableItem>
+                    <TableItem>X</TableItem>
+                    <TableItem>X</TableItem>
+                    <TableItem />
+                  </TableRow>
+                </Appear>
+                <Appear>
+                  <TableRow>
+                    <TableItem>Lifecycle methods</TableItem>
+                    <TableItem>X</TableItem>
+                    <TableItem>X</TableItem>
+                    <TableItem />
+                  </TableRow>
+                </Appear>
+                <Appear>
+                  <TableRow>
+                    <TableItem>Notes</TableItem>
+                    <TableItem>Deprecated!</TableItem>
+                    <TableItem />
+                    <TableItem>Good default</TableItem>
+                  </TableRow>
+                </Appear>
               </tbody>
             </Table>
           </Layout>
@@ -214,6 +226,18 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
+        <Slide transition={slideTransition}>
+          <Heading size={1}>
+            <code>key</code>
+          </Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!content!../examples/key_01.jsx")}
+            margin="20px auto"
+          />
+          <Link href="https://facebook.github.io/react/docs/reconciliation.html">Read React reconciliation documentation to understand more</Link>
+        </Slide>
+
         <Slide transition={slideTransition} bgColor="secondary">
           <Heading size={2} textColor="tertiary">
             Composition
@@ -222,7 +246,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={slideTransition}>
           <Heading size={1} fit>
-            <Link href="https://codesandbox.io/s/qvEWNmJ0">Why to compose?</Link>
+            <Link href="https://codesandbox.io/s/qvEWNmJ0">Why composition?</Link>
           </Heading>
           <CodePane
             lang="jsx"
