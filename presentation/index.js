@@ -85,9 +85,9 @@ export default class Presentation extends React.Component {
               <thead>
                 <TableRow>
                   <TableHeaderItem />
-                  <TableHeaderItem><code>createClass</code></TableHeaderItem>
+                  <TableHeaderItem><strike><code>createClass</code></strike></TableHeaderItem>
                   <TableHeaderItem><code>extends Component</code></TableHeaderItem>
-                  <TableHeaderItem>Functions</TableHeaderItem>
+                  <TableHeaderItem><u>Functions</u></TableHeaderItem>
                 </TableRow>
               </thead>
               <tbody>
@@ -129,14 +129,6 @@ export default class Presentation extends React.Component {
                     <TableItem>X</TableItem>
                     <TableItem>X</TableItem>
                     <TableItem />
-                  </TableRow>
-                </Appear>
-                <Appear>
-                  <TableRow>
-                    <TableItem>Notes</TableItem>
-                    <TableItem>Deprecated!</TableItem>
-                    <TableItem />
-                    <TableItem>Good default</TableItem>
                   </TableRow>
                 </Appear>
               </tbody>
