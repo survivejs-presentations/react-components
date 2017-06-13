@@ -125,7 +125,7 @@ export default class Presentation extends React.Component {
                 </Appear>
                 <Appear>
                   <TableRow>
-                    <TableItem>Lifecycle methods</TableItem>
+                    <TableItem>Lifecycle</TableItem>
                     <TableItem>X</TableItem>
                     <TableItem>X</TableItem>
                     <TableItem />
@@ -341,7 +341,8 @@ export default class Presentation extends React.Component {
           <List>
             <Appear><ListItem>0. Implement a <code>shouldComponentUpdate</code> at <b>Counter</b> so that it returns <code>false</code> and see when it gets triggered</ListItem></Appear>
             <Appear><ListItem>1. Implement a <code>componentDidMount</code> and <code>componentWillUnmount</code> to increase the count given an interval*</ListItem></Appear>
-            <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/lO8pPZ2Zl">0</Link>, <Link href="https://codesandbox.io/s/JZpQ1Gm3K">1</Link></ListItem></Appear>
+            <Appear><ListItem>2. Encapsulate timer logic within a <code>{`<Timer interval={1000} onTick={() => ...} />`}</code> component**</ListItem></Appear>
+            <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/lO8pPZ2Zl">0</Link>, <Link href="https://codesandbox.io/s/JZpQ1Gm3K">1</Link>, <Link href="https://codesandbox.io/s/66m6MVMqN">2</Link></ListItem></Appear>
           </List>
         </Slide>
 
@@ -381,7 +382,9 @@ export default class Presentation extends React.Component {
           <List>
             <Appear><ListItem>0. Extract reset concern into <code>withReset</code> HOC that contains <b>Counter</b> reset related logic</ListItem></Appear>
             <Appear><ListItem>1. Extract custom value concern into <code>withCustomValue</code> HOC that contains <b>Counter</b> custom input related logic*</ListItem></Appear>
-            <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/R6OWvlK30">0</Link>, <Link href="https://codesandbox.io/s/73v4G8MPr">1</Link></ListItem></Appear>
+            <Appear><ListItem>2. <Link href="https://github.com/reactjs/redux/blob/master/docs/api/compose.md"><code>compose</code></Link> <code>withReset</code> and <code>withCustomValue</code> together**</ListItem></Appear>
+            <Appear><ListItem>3. Extract <b>state</b> into <code>State</code> HOC that contains React state related logic. <Link href="https://medium.com/merrickchristensen/function-as-child-components-5f3920a9ace9">Hint: use function as a child</Link>***</ListItem></Appear>
+            <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/R6OWvlK30">0</Link>, <Link href="https://codesandbox.io/s/73v4G8MPr">1</Link>, <Link href="https://codesandbox.io/s/qjGPwAEwk">2</Link>, <Link href="https://codesandbox.io/s/j2GwNwQ54">3</Link></ListItem></Appear>
           </List>
         </Slide>
 
