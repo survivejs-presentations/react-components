@@ -341,7 +341,7 @@ export default class Presentation extends React.Component {
           <List>
             <Appear><ListItem>0. Implement a <code>shouldComponentUpdate</code> at <b>Counter</b> so that it returns <code>false</code> and see when it gets triggered</ListItem></Appear>
             <Appear><ListItem>1. Implement a <code>componentDidMount</code> and <code>componentWillUnmount</code> to increase the count given an interval*</ListItem></Appear>
-            <Appear><ListItem>2. Encapsulate timer logic within a <code>{`<Timer interval={1000} onTick={() => ...} />`}</code> component**</ListItem></Appear>
+            <Appear><ListItem>2. Encapsulate timer logic within a <code>{"<Timer interval={1000} onTick={() => ...} />"}</code> component**</ListItem></Appear>
             <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/lO8pPZ2Zl">0</Link>, <Link href="https://codesandbox.io/s/JZpQ1Gm3K">1</Link>, <Link href="https://codesandbox.io/s/66m6MVMqN">2</Link></ListItem></Appear>
           </List>
         </Slide>
