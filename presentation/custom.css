@@ -38,3 +38,7 @@ li {
   background-color: #6eedf8;
   cursor: pointer;
 }
+
+.redux-flow {
+  flex: initial !important;
+}

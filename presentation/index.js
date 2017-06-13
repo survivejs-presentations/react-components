@@ -1,6 +1,7 @@
 // Import React
 import React from "react";
 import mapValues from "lodash/mapValues";
+import TweetEmbed from "./tweet-embed";
 
 // Import Spectacle Core tags
 import {
@@ -385,6 +386,136 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>2. <Link href="https://github.com/reactjs/redux/blob/master/docs/api/compose.md"><code>compose</code></Link> <code>withReset</code> and <code>withCustomValue</code> together**</ListItem></Appear>
             <Appear><ListItem>3. Extract <b>state</b> into <code>State</code> HOC that contains React state related logic. <Link href="https://medium.com/merrickchristensen/function-as-child-components-5f3920a9ace9">Hint: use function as a child</Link>***</ListItem></Appear>
             <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/R6OWvlK30">0</Link>, <Link href="https://codesandbox.io/s/73v4G8MPr">1</Link>, <Link href="https://codesandbox.io/s/qjGPwAEwk">2</Link>, <Link href="https://codesandbox.io/s/j2GwNwQ54">3</Link></ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={slideTransition} bgColor="secondary">
+          <Heading size={2} textColor="tertiary">
+            Redux
+          </Heading>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={1}>
+            Redux Briefly
+          </Heading>
+          <List>
+            <Appear><ListItem>A guideline with utilities like <Link href="http://redux.js.org/docs/api/combineReducers.html">combineReducers</Link> to manage complexity</ListItem></Appear>
+            <Appear><ListItem>Single tree for state</ListItem></Appear>
+            <Appear><ListItem>Actions == Something happened</ListItem></Appear>
+            <Appear><ListItem>Reducers == How application state changes (pure!)</ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={slideTransition} className="redux-flow">
+          <TweetEmbed id="727821044308967425" />
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={1}>
+            Redux Continued
+          </Heading>
+          <List>
+            <Appear><ListItem>Time travel, undo, HMR support through design</ListItem></Appear>
+            <Appear><ListItem><Link href="https://github.com/paularmstrong/normalizr">Normalize</Link> to make it easier to write reducers</ListItem></Appear>
+            <Appear><ListItem>Extend through middleware and solutions around Redux</ListItem></Appear>
+            <Appear><ListItem>Strong ecosystem</ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={4}>
+            Minimal <Link href="http://redux.js.org/">Redux</Link>
+          </Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../examples/redux_01.jsx")}
+            margin="20px auto"
+          />
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={4}>
+            <Link href="http://redux.js.org/">Redux</Link> with a Store
+          </Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../examples/redux_02.jsx")}
+            margin="20px auto"
+          />
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={2}>
+            Exercises
+          </Heading>
+          <List>
+            <Appear><ListItem>0. Debug <Link href="https://codesandbox.io/s/nZMkVQ9mW">partially implemented Redux port</Link>. Why {"doesn't"} the interval or reset work as you might expect?</ListItem></Appear>
+            <Appear><ListItem>1. Implement Redux style actions and types for the previous example to fix the bug*</ListItem></Appear>
+            <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/X6POBmKoW">0</Link>, <Link href="https://codesandbox.io/s/rk2jxB4RK">1</Link></ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={slideTransition} bgColor="secondary">
+          <Heading size={2} textColor="tertiary">
+            Connecting Redux with React
+          </Heading>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={4}>
+            Connecting Using <Link href="https://www.npmjs.com/package/react-redux">react-redux</Link> 1/3
+          </Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../examples/redux_03.jsx")}
+            margin="20px auto"
+          />
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={4}>
+            Connecting Using <Link href="https://www.npmjs.com/package/react-redux">react-redux</Link> 2/3
+          </Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../examples/redux_04.jsx")}
+            margin="20px auto"
+          />
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={4}>
+            Connecting Using <Link href="https://www.npmjs.com/package/react-redux">react-redux</Link> 3/3
+          </Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../examples/redux_05.jsx")}
+            margin="20px auto"
+          />
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={1}>
+            <Link href="https://www.npmjs.com/package/react-redux">react-redux</Link> Recap
+          </Heading>
+          <List>
+            <Appear><ListItem>Split application to <b>containers</b> (connect) and <b>presentational</b> components</ListItem></Appear>
+            <Appear><ListItem>Push <code>connect</code> low in the hierarchy to improve performance</ListItem></Appear>
+            <Appear><ListItem>Use <Link href="https://github.com/reactjs/reselect">reselect</Link> to deal with derived data</ListItem></Appear>
+            <Appear><ListItem>Gotcha: <code>connect</code> is in pure mode by default, not always the right choice (routing)</ListItem></Appear>
+            <Appear><ListItem>Know your tools (read their APIs and code)</ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={2}>
+            Exercises
+          </Heading>
+          <List>
+            <Appear><ListItem>0. Replace custom <code>State</code> with <Link href="https://www.npmjs.com/package/react-redux">react-redux</Link> style <code>Provider</code>/<code>connect</code> pair. Hint: Use <code>context</code>!</ListItem></Appear>
+            <Appear><ListItem>1. Replace the custom pair with <Link href="https://www.npmjs.com/package/react-redux">react-redux</Link> based implementation</ListItem></Appear>
+            <Appear><ListItem>Solutions: <Link href="">0</Link>, <Link href="">1</Link></ListItem></Appear>
           </List>
         </Slide>
 
