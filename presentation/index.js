@@ -451,7 +451,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <List>
             <Appear><ListItem>0. Debug <Link href="https://codesandbox.io/s/nZMkVQ9mW">partially implemented Redux port</Link>. Why {"doesn't"} the interval or reset work as you might expect?</ListItem></Appear>
-            <Appear><ListItem>1. Implement Redux style actions and types for the previous example to fix the bug*</ListItem></Appear>
+            <Appear><ListItem>1. Implement Redux style actions and types for the previous example*</ListItem></Appear>
             <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/X6POBmKoW">0</Link>, <Link href="https://codesandbox.io/s/rk2jxB4RK">1</Link></ListItem></Appear>
           </List>
         </Slide>
