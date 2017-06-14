@@ -355,7 +355,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <List>
             <Appear><ListItem>Encapsulate a specific concern</ListItem></Appear>
-            <Appear><ListItem>Examples: <code>authenticated</code> route, <code>connect</code> (pass state)</ListItem></Appear>
+            <Appear><ListItem>Examples: <code>authenticated</code> route, <code>connect</code>, <Link href="https://www.npmjs.com/package/preconf">preconf</Link></ListItem></Appear>
             <Appear><ListItem>Smaller slices to test</ListItem></Appear>
             <Appear><ListItem><Link href="https://facebook.github.io/react/docs/higher-order-components.html">Read React Higher-Order Components to learn more</Link></ListItem></Appear>
             <Appear><ListItem>See also <Link href="https://github.com/acdlite/recompose">recompose</Link> for specific helpers</ListItem></Appear>
