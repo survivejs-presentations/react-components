@@ -26,7 +26,7 @@ import {
   //Text
 } from "spectacle";
 
-import Counter from './counter_01';
+import Counter from "./counter_01.jsx";
 
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
@@ -317,9 +317,6 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={2}>
-            Lifecycle Methods
-          </Heading>
           <Image src={images.lifecycle} margin="40px auto" height="324px" />
         </Slide>
 
