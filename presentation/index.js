@@ -209,7 +209,7 @@ export default class Presentation extends React.Component {
             Exercises
           </Heading>
           <List>
-            <Appear><ListItem>0. Fork the last code example at <Link href="https://codesandbox.io/">CodeSandbox</Link>. You can find a link to it in the header.</ListItem></Appear>
+            <Appear><ListItem>0. Fork <Link href="https://codesandbox.io/s/g5kzWv3Zl">the last code example</Link> at CodeSandbox</ListItem></Appear>
             <Appear><ListItem>1. Make it possible to add two cats at once</ListItem></Appear>
             <Appear><ListItem>2. Add a reset button to restore the count to zero*</ListItem></Appear>
             <Appear><ListItem>3. Add multiple options. Hint: <code>[1, 2, 4].map(...)</code>. Look up React <Link href="https://facebook.github.io/react/docs/reconciliation.html"><code>key</code></Link>. Why is it needed?**</ListItem></Appear>
