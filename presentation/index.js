@@ -378,7 +378,7 @@ export default class Presentation extends React.Component {
             Exercises
           </Heading>
           <List>
-            <Appear><ListItem>0. Extract reset concern into <code>withReset</code> HOC that contains <b>Counter</b> reset related logic</ListItem></Appear>
+            <Appear><ListItem>0. Extract reset concern into <code>withReset</code> HOC that contains <b>Counter</b> reset related logic. Hint: <Link href="https://codesandbox.io/s/oYljL1Y6k">starting point</Link></ListItem></Appear>
             <Appear><ListItem>1. Extract custom value concern into <code>withCustomValue</code> HOC that contains <b>Counter</b> custom input related logic*</ListItem></Appear>
             <Appear><ListItem>2. <Link href="https://github.com/reactjs/redux/blob/master/docs/api/compose.md"><code>compose</code></Link> <code>withReset</code> and <code>withCustomValue</code> together**</ListItem></Appear>
             <Appear><ListItem>3. Extract <b>state</b> into <code>State</code> HOC that contains React state related logic. <Link href="https://medium.com/merrickchristensen/function-as-child-components-5f3920a9ace9">Hint: use function as a child</Link>***</ListItem></Appear>
