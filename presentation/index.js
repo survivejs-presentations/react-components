@@ -22,7 +22,7 @@ import {
   Table,
   TableRow,
   TableHeaderItem,
-  TableItem
+  TableItem,
   //Text
 } from "spectacle";
 
@@ -40,10 +40,13 @@ require("spectacle/lib/themes/default/index.css");
 require("./custom.css");
 
 const slideTransition = ["slide"];
-const images = mapValues({
-  lifecycle: require("../images/lifecycle.png"),
-  survivejs: require("../images/survivejs.png")
-}, (v) => v.replace("/", ""));
+const images = mapValues(
+  {
+    lifecycle: require("../images/lifecycle.png"),
+    survivejs: require("../images/survivejs.png"),
+  },
+  v => v.replace("/", "")
+);
 
 preloader(images);
 
@@ -51,7 +54,7 @@ const theme = createTheme({
   primary: "white",
   secondary: "black",
   tertiary: "#09b5c4",
-  quartenary: "rgba(255, 219, 169, 0.43)"
+  quartenary: "rgba(255, 219, 169, 0.43)",
 });
 
 export default class Presentation extends React.Component {
@@ -65,35 +68,60 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={2}>
-            React Philosophy
-          </Heading>
+          <Heading size={2}>React Philosophy</Heading>
           <List>
-            <Appear><ListItem>Model your application as a component hierarchy</ListItem></Appear>
-            <Appear><ListItem>Each component can have <code>props</code> and <code>state</code></ListItem></Appear>
-            <Appear><ListItem>Escape hatches through <code>lifecycle methods</code> and <code>refs</code></ListItem></Appear>
-            <Appear><ListItem>React forces you to think about <code>state</code> (a good thing!)</ListItem></Appear>
+            <Appear>
+              <ListItem>
+                Model your application as a component hierarchy
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Each component can have <code>props</code> and{" "}
+                <code>state</code>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Escape hatches through <code>lifecycle methods</code> and{" "}
+                <code>refs</code>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                React forces you to think about <code>state</code> (a good
+                thing!)
+              </ListItem>
+            </Appear>
           </List>
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={2}>
-            Components
-          </Heading>
+          <Heading size={2}>Components</Heading>
           <Layout>
             <Table>
               <thead>
                 <TableRow>
                   <TableHeaderItem />
-                  <TableHeaderItem><strike><code>createClass</code></strike></TableHeaderItem>
-                  <TableHeaderItem><code>extends Component</code></TableHeaderItem>
-                  <TableHeaderItem><u>Functions</u></TableHeaderItem>
+                  <TableHeaderItem>
+                    <strike>
+                      <code>createClass</code>
+                    </strike>
+                  </TableHeaderItem>
+                  <TableHeaderItem>
+                    <code>extends Component</code>
+                  </TableHeaderItem>
+                  <TableHeaderItem>
+                    <u>Functions</u>
+                  </TableHeaderItem>
                 </TableRow>
               </thead>
               <tbody>
                 <Appear>
                   <TableRow>
-                    <TableItem><code>props</code></TableItem>
+                    <TableItem>
+                      <code>props</code>
+                    </TableItem>
                     <TableItem>X</TableItem>
                     <TableItem>X</TableItem>
                     <TableItem>X</TableItem>
@@ -101,7 +129,9 @@ export default class Presentation extends React.Component {
                 </Appear>
                 <Appear>
                   <TableRow>
-                    <TableItem><code>context</code></TableItem>
+                    <TableItem>
+                      <code>context</code>
+                    </TableItem>
                     <TableItem>X</TableItem>
                     <TableItem>X</TableItem>
                     <TableItem>X</TableItem>
@@ -109,7 +139,9 @@ export default class Presentation extends React.Component {
                 </Appear>
                 <Appear>
                   <TableRow>
-                    <TableItem><code>refs</code></TableItem>
+                    <TableItem>
+                      <code>refs</code>
+                    </TableItem>
                     <TableItem>X</TableItem>
                     <TableItem>X</TableItem>
                     <TableItem>X</TableItem>
@@ -117,7 +149,9 @@ export default class Presentation extends React.Component {
                 </Appear>
                 <Appear>
                   <TableRow>
-                    <TableItem><code>state</code></TableItem>
+                    <TableItem>
+                      <code>state</code>
+                    </TableItem>
                     <TableItem>X</TableItem>
                     <TableItem>X</TableItem>
                     <TableItem />
@@ -143,15 +177,15 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={2}>
-            Cat Counter
-          </Heading>
+          <Heading size={2}>Cat Counter</Heading>
           <Counter />
         </Slide>
 
         <Slide transition={slideTransition}>
           <Heading size={2}>
-            <Link href="https://codesandbox.io/s/76gK41lrQ"><code>React.Component</code></Link>
+            <Link href="https://codesandbox.io/s/76gK41lrQ">
+              <code>React.Component</code>
+            </Link>
           </Heading>
           <CodePane
             lang="jsx"
@@ -173,7 +207,13 @@ export default class Presentation extends React.Component {
 
         <Slide transition={slideTransition}>
           <Heading size={2} fit>
-            <Link href="https://codesandbox.io/s/JZxJgDqNg"><code>React.Component</code></Link> with <Link href="https://github.com/tc39/proposal-class-public-fields">public fields (stage 2)</Link>
+            <Link href="https://codesandbox.io/s/JZxJgDqNg">
+              <code>React.Component</code>
+            </Link>{" "}
+            with{" "}
+            <Link href="https://github.com/tc39/proposal-class-fields">
+              class fields (stage 3)
+            </Link>
           </Heading>
           <CodePane
             lang="jsx"
@@ -184,7 +224,10 @@ export default class Presentation extends React.Component {
 
         <Slide transition={slideTransition}>
           <Heading size={2} fit>
-            <Link href="https://codesandbox.io/s/3lBqVwL5A"><code>React.Component</code></Link> with Function Style <code>setState</code>
+            <Link href="https://codesandbox.io/s/3lBqVwL5A">
+              <code>React.Component</code>
+            </Link>{" "}
+            with Function Style <code>setState</code>
           </Heading>
           <CodePane
             lang="jsx"
@@ -195,7 +238,10 @@ export default class Presentation extends React.Component {
 
         <Slide transition={slideTransition}>
           <Heading size={2} fit>
-            <Link href="https://codesandbox.io/s/g5kzWv3Zl"><code>React.Component</code></Link> with Function Style <code>setState</code> Extracted
+            <Link href="https://codesandbox.io/s/g5kzWv3Zl">
+              <code>React.Component</code>
+            </Link>{" "}
+            with Function Style <code>setState</code> Extracted
           </Heading>
           <CodePane
             lang="jsx"
@@ -205,16 +251,49 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={2}>
-            Exercises
-          </Heading>
+          <Heading size={2}>Exercises</Heading>
           <List>
-            <Appear><ListItem>0. Fork <Link href="https://codesandbox.io/s/g5kzWv3Zl">the last code example</Link> at CodeSandbox</ListItem></Appear>
-            <Appear><ListItem>1. Make it possible to add two cats at once</ListItem></Appear>
-            <Appear><ListItem>2. Add a reset button to restore the count to zero*</ListItem></Appear>
-            <Appear><ListItem>3. Add multiple options. Hint: <code>[1, 2, 4].map(...)</code>. Look up React <Link href="https://facebook.github.io/react/docs/reconciliation.html"><code>key</code></Link>. Why is it needed?**</ListItem></Appear>
-            <Appear><ListItem>4. Try <code>this.setState(..., cb)***</code></ListItem></Appear>
-            <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/g5kzWv3Zl">0</Link>, <Link href="https://codesandbox.io/s/L98PX9kMp">1</Link>, <Link href="https://codesandbox.io/s/Q1qvPRW55">2</Link>, <Link href="https://codesandbox.io/s/31J17rM7n">3</Link>, <Link href="https://codesandbox.io/s/qvEWNmJ0">4</Link></ListItem></Appear>
+            <Appear>
+              <ListItem>
+                0. Fork{" "}
+                <Link href="https://codesandbox.io/s/g5kzWv3Zl">
+                  the last code example
+                </Link>{" "}
+                at CodeSandbox
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>1. Make it possible to add two cats at once</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                2. Add a reset button to restore the count to zero*
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                3. Add multiple options. Hint: <code>[1, 2, 4].map(...)</code>.
+                Look up React{" "}
+                <Link href="https://facebook.github.io/react/docs/reconciliation.html">
+                  <code>key</code>
+                </Link>. Why is it needed?**
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                4. Try <code>this.setState(..., cb)***</code>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Solutions:{" "}
+                <Link href="https://codesandbox.io/s/g5kzWv3Zl">0</Link>,{" "}
+                <Link href="https://codesandbox.io/s/L98PX9kMp">1</Link>,{" "}
+                <Link href="https://codesandbox.io/s/Q1qvPRW55">2</Link>,{" "}
+                <Link href="https://codesandbox.io/s/31J17rM7n">3</Link>,{" "}
+                <Link href="https://codesandbox.io/s/qvEWNmJ0">4</Link>
+              </ListItem>
+            </Appear>
           </List>
         </Slide>
 
@@ -227,7 +306,9 @@ export default class Presentation extends React.Component {
             source={require("raw-loader!content!../examples/key_01.jsx")}
             margin="20px auto"
           />
-          <Link href="https://facebook.github.io/react/docs/reconciliation.html">Read React reconciliation documentation to understand more</Link>
+          <Link href="https://facebook.github.io/react/docs/reconciliation.html">
+            Read React reconciliation documentation to understand more
+          </Link>
         </Slide>
 
         <Slide transition={slideTransition} bgColor="secondary">
@@ -238,7 +319,9 @@ export default class Presentation extends React.Component {
 
         <Slide transition={slideTransition}>
           <Heading size={2}>
-            <Link href="https://codesandbox.io/s/qvEWNmJ0">Why composition?</Link>
+            <Link href="https://codesandbox.io/s/qvEWNmJ0">
+              Why composition?
+            </Link>
           </Heading>
           <CodePane
             lang="jsx"
@@ -259,15 +342,36 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={2}>
-            Exercises
-          </Heading>
+          <Heading size={2}>Exercises</Heading>
           <List>
-            <Appear><ListItem>0. Decompose the counter as in the slides</ListItem></Appear>
-            <Appear><ListItem>1. Implement <b>App</b> that contains multiple <b>CatCounter</b>s</ListItem></Appear>
-            <Appear><ListItem>2. Implement a generic <b>Counter</b> so you can count other things*</ListItem></Appear>
-            <Appear><ListItem>3. Count total of all things in the user interface**</ListItem></Appear>
-            <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/X6GyyXg9v">0</Link>, <Link href="https://codesandbox.io/s/73AKPwX3j">1</Link>, <Link href="https://codesandbox.io/s/O7L2zM0mg">2</Link>, <Link href="https://codesandbox.io/s/X64K29kMo">3</Link></ListItem></Appear>
+            <Appear>
+              <ListItem>0. Decompose the counter as in the slides</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                1. Implement <b>App</b> that contains multiple <b>CatCounter</b>s
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                2. Implement a generic <b>Counter</b> so you can count other
+                things*
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                3. Count total of all things in the user interface**
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Solutions:{" "}
+                <Link href="https://codesandbox.io/s/X6GyyXg9v">0</Link>,{" "}
+                <Link href="https://codesandbox.io/s/73AKPwX3j">1</Link>,{" "}
+                <Link href="https://codesandbox.io/s/O7L2zM0mg">2</Link>,{" "}
+                <Link href="https://codesandbox.io/s/X64K29kMo">3</Link>
+              </ListItem>
+            </Appear>
           </List>
         </Slide>
 
@@ -300,13 +404,26 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={2}>
-            Exercises
-          </Heading>
+          <Heading size={2}>Exercises</Heading>
           <List>
-            <Appear><ListItem>0. Capture a custom amount using an input and a <b>ref</b></ListItem></Appear>
-            <Appear><ListItem>1. Do the same without a <b>ref</b>*</ListItem></Appear>
-            <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/VO7zJD0k5">0</Link> (can you see the bug?), <Link href="https://codesandbox.io/s/RoznJpjpE">1</Link></ListItem></Appear>
+            <Appear>
+              <ListItem>
+                0. Capture a custom amount using an input and a <b>ref</b>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                1. Do the same without a <b>ref</b>*
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Solutions:{" "}
+                <Link href="https://codesandbox.io/s/VO7zJD0k5">0</Link> (can
+                you see the bug?),{" "}
+                <Link href="https://codesandbox.io/s/RoznJpjpE">1</Link>
+              </ListItem>
+            </Appear>
           </List>
         </Slide>
 
@@ -332,14 +449,39 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={2}>
-            Exercises
-          </Heading>
+          <Heading size={2}>Exercises</Heading>
           <List>
-            <Appear><ListItem>0. Implement a <code>shouldComponentUpdate</code> at <b>Counter</b> so that it returns <code>false</code> and see when it gets triggered</ListItem></Appear>
-            <Appear><ListItem>1. Implement a <code>componentDidMount</code> and <code>componentWillUnmount</code> to increase the count given an interval*</ListItem></Appear>
-            <Appear><ListItem>2. Encapsulate timer logic within a <code>{"<Timer interval={1000} onTick={() => ...} />"}</code> component**</ListItem></Appear>
-            <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/lO8pPZ2Zl">0</Link>, <Link href="https://codesandbox.io/s/JZpQ1Gm3K">1</Link>, <Link href="https://codesandbox.io/s/66m6MVMqN">2</Link></ListItem></Appear>
+            <Appear>
+              <ListItem>
+                0. Implement a <code>shouldComponentUpdate</code> at{" "}
+                <b>Counter</b> so that it returns <code>false</code> and see
+                when it gets triggered
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                1. Implement a <code>componentDidMount</code> and{" "}
+                <code>componentWillUnmount</code> to increase the count given an
+                interval*
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                2. Encapsulate timer logic within a{" "}
+                <code>
+                  {"<Timer interval={1000} onTick={() => ...} />"}
+                </code>{" "}
+                component**
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Solutions:{" "}
+                <Link href="https://codesandbox.io/s/lO8pPZ2Zl">0</Link>,{" "}
+                <Link href="https://codesandbox.io/s/JZpQ1Gm3K">1</Link>,{" "}
+                <Link href="https://codesandbox.io/s/66m6MVMqN">2</Link>
+              </ListItem>
+            </Appear>
           </List>
         </Slide>
 
@@ -354,11 +496,36 @@ export default class Presentation extends React.Component {
             Why Higher-Order Components?
           </Heading>
           <List>
-            <Appear><ListItem>Encapsulate a specific concern</ListItem></Appear>
-            <Appear><ListItem>Examples: <code>authenticated</code> route, <code>connect</code>, <Link href="https://www.npmjs.com/package/preconf">preconf</Link></ListItem></Appear>
-            <Appear><ListItem>Smaller slices to test</ListItem></Appear>
-            <Appear><ListItem><Link href="https://facebook.github.io/react/docs/higher-order-components.html">Read React Higher-Order Components to learn more</Link></ListItem></Appear>
-            <Appear><ListItem>See also <Link href="https://github.com/acdlite/recompose">recompose</Link> for specific helpers</ListItem></Appear>
+            <Appear>
+              <ListItem>Encapsulate a specific concern</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Examples: <code>authenticated</code> route, <code>connect</code>,{" "}
+                <Link href="https://www.npmjs.com/package/preconf">
+                  preconf
+                </Link>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Smaller slices to test</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                <Link href="https://facebook.github.io/react/docs/higher-order-components.html">
+                  Read React Higher-Order Components to learn more
+                </Link>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                See also{" "}
+                <Link href="https://github.com/acdlite/recompose">
+                  recompose
+                </Link>{" "}
+                for specific helpers
+              </ListItem>
+            </Appear>
           </List>
         </Slide>
 
@@ -374,25 +541,60 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={2}>
-            Exercises
-          </Heading>
+          <Heading size={2}>Exercises</Heading>
           <List>
-            <Appear><ListItem>0. Extract reset concern into <code>withReset</code> HOC that contains <b>Counter</b> reset related logic. Hint: <Link href="https://codesandbox.io/s/oYljL1Y6k">starting point</Link></ListItem></Appear>
-            <Appear><ListItem>1. Extract custom value concern into <code>withCustomValue</code> HOC that contains <b>Counter</b> custom input related logic*</ListItem></Appear>
-            <Appear><ListItem>2. <Link href="https://github.com/reactjs/redux/blob/master/docs/api/compose.md"><code>compose</code></Link> <code>withReset</code> and <code>withCustomValue</code> together**</ListItem></Appear>
-            <Appear><ListItem>3. Extract <b>state</b> into <code>State</code> HOC that contains React state related logic. <Link href="https://medium.com/merrickchristensen/function-as-child-components-5f3920a9ace9">Hint: use function as a child</Link>***</ListItem></Appear>
-            <Appear><ListItem>Solutions: <Link href="https://codesandbox.io/s/R6OWvlK30">0</Link>, <Link href="https://codesandbox.io/s/73v4G8MPr">1</Link>, <Link href="https://codesandbox.io/s/qjGPwAEwk">2</Link>, <Link href="https://codesandbox.io/s/j2GwNwQ54">3</Link></ListItem></Appear>
+            <Appear>
+              <ListItem>
+                0. Extract reset concern into <code>withReset</code> HOC that
+                contains <b>Counter</b> reset related logic. Hint:{" "}
+                <Link href="https://codesandbox.io/s/oYljL1Y6k">
+                  starting point
+                </Link>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                1. Extract custom value concern into{" "}
+                <code>withCustomValue</code> HOC that contains <b>Counter</b>{" "}
+                custom input related logic*
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                2.{" "}
+                <Link href="https://github.com/reactjs/redux/blob/master/docs/api/compose.md">
+                  <code>compose</code>
+                </Link>{" "}
+                <code>withReset</code> and <code>withCustomValue</code>{" "}
+                together**
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                3. Extract <b>state</b> into <code>State</code> HOC that
+                contains React state related logic.{" "}
+                <Link href="https://medium.com/merrickchristensen/function-as-child-components-5f3920a9ace9">
+                  Hint: use function as a child
+                </Link>***
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Solutions:{" "}
+                <Link href="https://codesandbox.io/s/R6OWvlK30">0</Link>,{" "}
+                <Link href="https://codesandbox.io/s/73v4G8MPr">1</Link>,{" "}
+                <Link href="https://codesandbox.io/s/qjGPwAEwk">2</Link>,{" "}
+                <Link href="https://codesandbox.io/s/j2GwNwQ54">3</Link>
+              </ListItem>
+            </Appear>
           </List>
         </Slide>
 
         <Slide transition={slideTransition}>
           <Link href="https://www.survivejs.com/">
-            <Heading size={1}>
-              SurviveJS
-            </Heading>
+            <Heading size={1}>SurviveJS</Heading>
           </Link>
-          <Image src={images.survivejs} margin="0px auto 40px" height="524px"/>
+          <Image src={images.survivejs} margin="0px auto 40px" height="524px" />
         </Slide>
 
         <Slide transition={slideTransition} bgColor="tertiary">
